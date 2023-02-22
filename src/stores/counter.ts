@@ -6,6 +6,7 @@ export const useCounterStore = defineStore('counter', {
     hello: 'Hello Wolrd',
     count: 10,
     phoneNum: '15139333888',
+    token: '123456789',
   }),
   getters: {
     doubleCount(state) {
