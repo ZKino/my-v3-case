@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
+import HelloWorld from '@/views/HelloWorld.vue'
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -10,12 +12,17 @@ const router = createRouter({
     {
       path: '/',
       name: 'hello',
-      component: () => import('@/views/HelloWorld.vue'),
+      component: HelloWorld,
     },
     {
       path: '/pinia',
       name: 'pinia',
       component: () => import('@/views/PiniaDemo.vue'),
+    },
+    {
+      path: '/select',
+      name: 'select',
+      component: () => import('@/views/SelectBox.vue'),
     },
   ],
 })

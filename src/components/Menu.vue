@@ -6,6 +6,7 @@ import { RouterLink } from 'vue-router'
   <ul class="nav-list">
     <li class="nav-item"><RouterLink to="/">Hello World</RouterLink></li>
     <li class="nav-item"><RouterLink to="/pinia">Pinia使用</RouterLink></li>
+    <li class="nav-item"><RouterLink to="/select">全选与反选</RouterLink></li>
   </ul>
 </template>
 

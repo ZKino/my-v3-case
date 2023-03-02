@@ -1,19 +1,22 @@
-import { onMounted } from 'vue'
-import throttle from 'lodash/throttle'
+const useDrag = (handle: HTMLElement, target: HTMLElement) => {
+  const setWidth = (size: number) => {
+    target.style.flex = `0 0 ${size}px`
+    target.style.width = `${size}px`
+  }
 
-const useDrag = (handle: HTMLDivElement, target: HTMLDivElement) => {
-  const handleMove = throttle((e: MouseEvent) => {
-    console.log(handle, 'handle')
-    console.log(target, 'target')
-
-    if (e.clientX - target.offsetLeft > 400) {
-      target.style.flex = '0 0 400px'
-    } else if (e.clientX - target.offsetLeft < 200) {
-      target.style.flex = '0 0 200px'
+  const handleMove = (e: MouseEvent) => {
+    // console.log(handle, 'handle')
+    // console.log(target, 'target')
+    // console.log(e.clientX, '===')
+    
+    if (e.clientX > 400) {
+      setWidth(400)
+    } else if (e.clientX < 100) {
+      setWidth(100)
     } else {
-      target.style.flex = `0 0 ${e.clientX - target.offsetLeft}px`
+      setWidth(e.clientX)
     }
-  }, 500)
+  }
 
   handle.addEventListener('mousedown', () => {
     document.addEventListener('mousemove', handleMove)
@@ -22,8 +25,6 @@ const useDrag = (handle: HTMLDivElement, target: HTMLDivElement) => {
   document.addEventListener('mouseup', () => {
     document.removeEventListener('mousemove', handleMove)
   })
-
-  return {}
 }
 
 export default useDrag
