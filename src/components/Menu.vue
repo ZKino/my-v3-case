@@ -7,6 +7,7 @@ import { RouterLink } from 'vue-router'
     <li class="nav-item"><RouterLink to="/">Hello World</RouterLink></li>
     <li class="nav-item"><RouterLink to="/pinia">Pinia使用</RouterLink></li>
     <li class="nav-item"><RouterLink to="/select">全选与反选</RouterLink></li>
+    <li class="nav-item"><RouterLink to="/css">CSS水滴动画</RouterLink></li>
   </ul>
 </template>
 
@@ -22,11 +23,11 @@ import { RouterLink } from 'vue-router'
       color: #333;
 
       &:hover {
-        color: #fe6a00;
+        color: #409eff;
       }
     }
     .router-link-active {
-      color: #fe6a00;
+      color: #409eff;
     }
   }
 }

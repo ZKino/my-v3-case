@@ -24,6 +24,11 @@ const router = createRouter({
       name: 'select',
       component: () => import('@/views/SelectBox.vue'),
     },
+    {
+      path: '/css',
+      name: 'css',
+      component: () => import('@/views/WaterDemo.vue'),
+    },
   ],
 })
 
