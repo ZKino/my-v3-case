@@ -8,6 +8,7 @@ import { RouterLink } from 'vue-router'
     <li class="nav-item"><RouterLink to="/pinia">Pinia使用</RouterLink></li>
     <li class="nav-item"><RouterLink to="/select">全选与反选</RouterLink></li>
     <li class="nav-item"><RouterLink to="/css">CSS水滴动画</RouterLink></li>
+    <li class="nav-item"><RouterLink to="/loading">CSS-Loading动画</RouterLink></li>
   </ul>
 </template>
 

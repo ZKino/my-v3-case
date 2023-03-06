@@ -29,6 +29,11 @@ const router = createRouter({
       name: 'css',
       component: () => import('@/views/WaterDemo.vue'),
     },
+    {
+      path: '/loading',
+      name: 'loading',
+      component: () => import('@/views/LoadingDemo.vue'),
+    },
   ],
 })
 
