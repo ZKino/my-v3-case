@@ -19,21 +19,6 @@ const router = createRouter({
       name: 'pinia',
       component: () => import('@/views/PiniaDemo.vue'),
     },
-    {
-      path: '/select',
-      name: 'select',
-      component: () => import('@/views/SelectBox.vue'),
-    },
-    {
-      path: '/css',
-      name: 'css',
-      component: () => import('@/views/WaterDemo.vue'),
-    },
-    {
-      path: '/loading',
-      name: 'loading',
-      component: () => import('@/views/LoadingDemo.vue'),
-    },
   ],
 })
 

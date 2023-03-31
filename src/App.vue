@@ -1,20 +1,22 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { RouterView } from 'vue-router'
-import Menu from './components/Menu.vue'
 import useDrag from '@/hooks/useDrag'
 
 const navRef = ref()
 const splRef = ref()
 onMounted(() => {
-  useDrag(splRef.value, navRef.value)
+  useDrag(splRef.value, navRef.value, 800)
 })
 </script>
 
 <template>
   <main class="main">
     <nav class="nav" ref="navRef">
-      <Menu></Menu>
+      <ul class="nav-list">
+        <li class="nav-item"><RouterLink to="/">Hello World</RouterLink></li>
+        <li class="nav-item"><RouterLink to="/pinia">Pinia使用</RouterLink></li>
+      </ul>
     </nav>
     <div class="splitter" ref="splRef"></div>
     <section class="content">
@@ -36,6 +38,26 @@ onMounted(() => {
     box-sizing: border-box;
     overflow-y: auto;
     background-color: #f5f5f5;
+
+    .nav-list {
+      .nav-item {
+        cursor: pointer;
+
+        a {
+          display: inline-block;
+          line-height: 28px;
+          font-size: 14px;
+          color: #333;
+
+          &:hover {
+            color: #409eff;
+          }
+        }
+        .router-link-active {
+          color: #409eff;
+        }
+      }
+    }
   }
 
   .splitter {
