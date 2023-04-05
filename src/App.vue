@@ -14,29 +14,8 @@ onMounted(() => {
   <main class="main">
     <nav class="nav" ref="navRef">
       <ul class="nav-list">
-<<<<<<< HEAD
-        <li class="nav-item">
-          <RouterLink to="/">Hello World</RouterLink>
-        </li>
-        <li class="nav-item">
-          <RouterLink to="/pinia">Pinia使用</RouterLink>
-        </li>
-        <li class="nav-item">
-          <RouterLink to="/select">全选与反选</RouterLink>
-        </li>
-        <li class="nav-item">
-          <RouterLink to="/css">CSS水滴动画</RouterLink>
-        </li>
-        <li class="nav-item">
-          <RouterLink to="/loading">CSS-Loading动画</RouterLink>
-        </li>
-        <li class="nav-item">
-          <RouterLink to="/puzzle">拼图验证功能</RouterLink>
-        </li>
-=======
         <li class="nav-item"><RouterLink to="/">Hello World</RouterLink></li>
         <li class="nav-item"><RouterLink to="/pinia">Pinia使用</RouterLink></li>
->>>>>>> f4d07392eab317e178b8c0c8ee07a82dd3faec8a
       </ul>
     </nav>
     <div class="splitter" ref="splRef"></div>
