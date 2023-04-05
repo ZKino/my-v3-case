@@ -19,6 +19,7 @@ const router = createRouter({
       name: 'pinia',
       component: () => import('@/views/PiniaDemo.vue'),
     },
+<<<<<<< HEAD
     {
       path: '/select',
       name: 'select',
@@ -39,6 +40,8 @@ const router = createRouter({
       name: 'puzzle',
       component: () => import('@/views/PuzzleDemo.vue'),
     },
+=======
+>>>>>>> f4d07392eab317e178b8c0c8ee07a82dd3faec8a
   ],
 })
 

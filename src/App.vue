@@ -6,7 +6,7 @@ import useDrag from '@/hooks/useDrag'
 const navRef = ref()
 const splRef = ref()
 onMounted(() => {
-  useDrag(splRef.value, navRef.value)
+  useDrag(splRef.value, navRef.value, 800)
 })
 </script>
 
@@ -14,6 +14,7 @@ onMounted(() => {
   <main class="main">
     <nav class="nav" ref="navRef">
       <ul class="nav-list">
+<<<<<<< HEAD
         <li class="nav-item">
           <RouterLink to="/">Hello World</RouterLink>
         </li>
@@ -32,6 +33,10 @@ onMounted(() => {
         <li class="nav-item">
           <RouterLink to="/puzzle">拼图验证功能</RouterLink>
         </li>
+=======
+        <li class="nav-item"><RouterLink to="/">Hello World</RouterLink></li>
+        <li class="nav-item"><RouterLink to="/pinia">Pinia使用</RouterLink></li>
+>>>>>>> f4d07392eab317e178b8c0c8ee07a82dd3faec8a
       </ul>
     </nav>
     <div class="splitter" ref="splRef"></div>

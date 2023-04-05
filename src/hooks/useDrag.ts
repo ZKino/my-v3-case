@@ -17,10 +17,6 @@ const useDrag = (
   }
 
   const handleMove = (e: MouseEvent) => {
-    // console.log(handle, 'handle')
-    // console.log(target, 'target')
-    // console.log(e.clientX, '===')
-
     if (e.clientX > maxWidth) {
       setWidth(maxWidth)
     } else if (e.clientX < minWidth) {
