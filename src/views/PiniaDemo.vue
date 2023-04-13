@@ -69,7 +69,7 @@ const changeActionsAge = () => {
     {{ userStore.addAge(10) }}
   </div>
   <div>
-    user仓库中actions传参的使用:
+    user仓库中actions异步请求数据的使用:
     <el-button type="primary" @click="changeActionsAge">actions change age</el-button>
   </div>
 </template>
