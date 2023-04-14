@@ -18,12 +18,23 @@ export default defineConfig({
       resolvers: [ElementPlusResolver()],
     }),
     viteMockServe({
-      localEnabled: true
-    })
+      localEnabled: true,
+    }),
   ],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
+    },
+  },
+  server: {
+    proxy: {
+      '/apiTest': {
+        target: 'https://jicai-re.holderzone.cn', // 代理的线上的接口地址
+        // secure: false, // 接受运行在https上，默认不接受
+        // ws: true, // 如果要代理 websockets
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/apiTest/, ''), // 重写路径，这种是没有我们定义的前缀
+      },
     },
   },
 })
