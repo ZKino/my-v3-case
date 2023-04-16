@@ -19,11 +19,6 @@ const router = createRouter({
       name: 'pinia',
       component: () => import('@/views/PiniaDemo.vue'),
     },
-    {
-      path: '/calendar',
-      name: 'calendar',
-      component: () => import('@/views/CalendarDemo.vue'),
-    },
   ],
 })
 
