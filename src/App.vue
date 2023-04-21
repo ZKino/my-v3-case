@@ -16,7 +16,6 @@ onMounted(() => {
       <ul class="nav-list">
         <li class="nav-item"><RouterLink to="/">Hello World</RouterLink></li>
         <li class="nav-item"><RouterLink to="/pinia">Pinia使用</RouterLink></li>
-        <li class="nav-item"><RouterLink to="/calendar">封装一个日历</RouterLink></li>
       </ul>
     </nav>
     <div class="splitter" ref="splRef"></div>
