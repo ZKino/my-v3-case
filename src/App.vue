@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { RouterView } from 'vue-router'
+import { RouterView, useRouter } from 'vue-router'
 import useDrag from '@/hooks/useDrag'
+
+const routerList = useRouter().getRoutes()
 
 const navRef = ref()
 const splRef = ref()
@@ -14,8 +16,9 @@ onMounted(() => {
   <main class="main">
     <nav class="nav" ref="navRef">
       <ul class="nav-list">
-        <li class="nav-item"><RouterLink to="/">Hello World</RouterLink></li>
-        <li class="nav-item"><RouterLink to="/pinia">Pinia使用</RouterLink></li>
+        <li class="nav-item" v-for="router in routerList" :key="router.name">
+          <RouterLink :to="router.path">{{ router.name }}</RouterLink>
+        </li>
       </ul>
     </nav>
     <div class="splitter" ref="splRef"></div>
