@@ -29,7 +29,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/apiTest': {
-        target: 'https://jicai-re.holderzone.cn', // 代理的线上的接口地址
+        target: 'http://192.168.10.6:3000', // 代理的线上的接口地址
         // secure: false, // 接受运行在https上，默认不接受
         // ws: true, // 如果要代理 websockets
         changeOrigin: true,
