@@ -32,7 +32,7 @@ const remove = (item: any) => {
   <hr />
   <h3>TransitionGroup组件</h3>
   <el-button type="primary" @click="insert">插入</el-button>
-  <el-button type="primary" @click="reset">移除</el-button>
+  <!-- <el-button type="primary" @click="reset">移除</el-button> -->
   <TransitionGroup name="list" tag="ul">
     <li v-for="item in list" :key="item.id">
       {{ item.name }}
