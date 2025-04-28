@@ -1,14 +1,5 @@
-<script setup lang="ts">
-import { getUsers } from "@/services/api";
-
-const onGetUsers = async () => {
-  const res = await getUsers();
-  console.log(res, "====");
-};
-</script>
-
 <template>
-  <h3>CSS 标签超出显示数量</h3>
+  <h3 class="title">CSS 标签超出显示数量</h3>
   <div class="wrap">
     <div class="con">
       <a class="tag">HTML</a>
@@ -23,22 +14,26 @@ const onGetUsers = async () => {
   <input
     type="range"
     min="200"
-    value="300"
     max="800"
+    value="300"
     oninput="this.previousElementSibling.style.width = this.value + 'px'"
   />
 </template>
 
 <style scoped lang="scss">
+.title {
+  padding: 10px 0;
+}
+
 .wrap {
   width: 300px;
   display: flex;
   align-items: center;
-  padding: 15px;
-  outline: 2px solid #9747ff;
   gap: 5px;
+  outline: 2px solid #9747ff;
   overflow: hidden;
 }
+
 .con {
   position: relative;
   display: flex;
@@ -50,17 +45,15 @@ const onGetUsers = async () => {
   animation-timeline: scroll(x self);
   margin-right: -46px;
 }
+
 @keyframes check {
   from,
   to {
     margin-right: 0;
-    -webkit-mask: linear-gradient(
-      to right,
-      #fff calc(100% - 30px),
-      transparent
-    );
+    -webkit-mask: linear-gradient(to right, #fff calc(100% - 30px), transparent);
   }
 }
+
 .wrap::after {
   content: "+" counter(num);
   padding: 0.2em 0.5em;
@@ -68,6 +61,7 @@ const onGetUsers = async () => {
   color: #191919;
   border-radius: 4px;
 }
+
 .tag {
   padding: 0.2em 0.5em;
   background-color: #9747ff;
@@ -78,6 +72,7 @@ const onGetUsers = async () => {
   animation-timeline: view(inline);
   animation-range: contain;
 }
+
 @keyframes appear {
   from,
   to {

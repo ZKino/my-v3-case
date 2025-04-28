@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import MyInput from "./组件封装三板斧(子组件).vue";
+import MyInput from "./ComponentsChildren.vue";
 
 const name = ref("Tracy");
 
